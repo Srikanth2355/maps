@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Google Maps</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+</head>
+
+<body>
+    <div class="title">Store Locator</div>
+    <div class="search-container">
+        <div class="search">
+            <input type="text" id="zip-code" placeholder="Enter Pincode" onkeyup="onEnter(event)">
+            <i class="fas fa-search"  onclick="getStores()"></i>
+        </div>
+    </div>
+    <div class="stores-list-container">
+        <div class="stores-list">
+            <div class="intro">
+                <span class="enter-zip">Enter Zip Code</span>
+                <span class="find-stores">Find Stores near you</span>
+                <span class="note">Note: As it is a predefined data only some zipcodes will work like 90048,90036,90069,<br>90046,90028,90038,90004</span>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="js/index.js" async defer></script>
+    
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgBrND0FOPTYYXQoI1XMfv-ELTvK7jnqY&callback=initMap&libraries=&v=weekly"
+        async></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgBrND0FOPTYYXQoI1XMfv-ELTvK7jnqY&callback=initMap"
+        async></script> -->
+</body>
+
+</html>
